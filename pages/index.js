@@ -21,8 +21,18 @@ export default function Home() {
           <code className={styles.code}>init</code>
         </p>
 
-        <button onClick={(e) => auth.signinWithGithub()}>Sign In</button>
-        <div>{auth?.user}</div>
+        {auth?.user ? (
+          <>
+            <div>Welcome back! {auth?.user?.email}</div>
+            <button onClick={(e) => auth.signout()}>Sign Out</button>
+          </>
+        ) : (
+          <>
+            <button onClick={(e) => auth.signinWithGithub()}>Sign In</button>
+            {/* 인증 사용자 확인은 아래 링크에서. */}
+            {/* https://console.firebase.google.com/u/0/project/fast-feedback-demo-b442c/authentication/users?hl=ko */}
+          </>
+        )}
       </main>
 
       <footer className={styles.footer}>
