@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useAuth } from '@/lib/auth';
 
-import { Button, Heading, Text } from '@chakra-ui/react';
+import { Button, Heading, Text, Code } from '@chakra-ui/react';
 
 export default function Home() {
   const auth = useAuth();
@@ -17,13 +17,15 @@ export default function Home() {
 
           {auth?.user ? (
             <>
-              <Text>
-                {auth?.user?.name?.split(' ')[0] ? (
-                  <>Welcome back, {auth?.user?.name?.split(' ')[0]}!</>
-                ) : (
-                  <>Welcome back!</>
-                )}
-              </Text>
+              {auth?.user?.name?.split(' ')[0] ? (
+                <Text>
+                  Welcome back, {auth?.user?.name?.split(' ')[0]}!
+                  <br />
+                  (current user: <Code>{auth?.user?.email}</Code>)
+                </Text>
+              ) : (
+                <>Welcome back!</>
+              )}
               <Button onClick={(e) => auth.signout()}>Sign Out</Button>
             </>
           ) : (
