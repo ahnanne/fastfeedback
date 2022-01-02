@@ -1,20 +1,21 @@
 import { AuthProvider } from '../lib/auth';
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider, CSSReset } from '@chakra-ui/react';
 
 import '../styles/globals.css';
-import theme from '../styles/theme';
+import customTheme from '../styles/theme';
 
 /**
  * https://nextjs.org/docs/advanced-features/custom-app
  */
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={customTheme}>
       <AuthProvider>
+        <CSSReset />
         <Component {...pageProps} />
       </AuthProvider>
     </ThemeProvider>
   );
 }
 
-export default MyApp;
+export default App;
