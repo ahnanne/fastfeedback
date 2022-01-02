@@ -1,5 +1,4 @@
 const formatUser = (user) => {
-  console.log(user);
   return {
     uid: user.uid,
     email: user.email,

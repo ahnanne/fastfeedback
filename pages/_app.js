@@ -1,8 +1,8 @@
-import { AuthProvider } from '../lib/auth';
+import { AuthProvider } from '@/lib/auth';
 import { ThemeProvider, CSSReset } from '@chakra-ui/react';
 
-import '../styles/globals.css';
-import customTheme from '../styles/theme';
+import '@/styles/globals.css';
+import customTheme from '@/styles/theme';
 
 /**
  * https://nextjs.org/docs/advanced-features/custom-app
