@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useAuth } from '@/lib/auth';
 
 import { Button, Heading, Text, Code, Flex } from '@chakra-ui/react';
@@ -6,6 +7,7 @@ import { LogoIcon } from '@/components/icons/LogoIcon';
 
 export default function Home() {
   const auth = useAuth();
+  const router = useRouter();
 
   return (
     <>
@@ -24,7 +26,10 @@ export default function Home() {
           <Heading>Fast Feedback</Heading>
           <LogoIcon w={101} h={20} />
           {auth?.user ? (
-            <Button onClick={(e) => auth.signout()}>Sign Out</Button>
+            // <Button onClick={() => auth.signout()}>Sign Out</Button>
+            <Button onClick={() => router.push('/dashboard')}>
+              Go to Dashboard
+            </Button>
           ) : (
             <>
               <Button
