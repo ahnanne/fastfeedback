@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { Button, Flex, Text } from '@chakra-ui/react';
+import SpinBoxView from './view/SpinBoxView';
 
 const SpinBox = () => {
   const [value, setValue] = useState(0);
 
-  return (
-    <Flex w="100vw" h="100vh" align="center" justify="center">
-      <Button onClick={() => setValue(value - 1)}>-</Button>
-      <Text m={4}>{value}</Text>
-      <Button onClick={() => setValue(value + 1)}>+</Button>
-    </Flex>
-  );
+  // JSX를 추상화한 props object
+  const props = {
+    value,
+    onDecrease: () => setValue(value - 1),
+    onIncrease: () => setValue(value + 1)
+  };
+
+  // JSX를 VAC로 교체
+  return <SpinBoxView {...props} />;
 };
 
 export default SpinBox;
