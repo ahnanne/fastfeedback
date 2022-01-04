@@ -1,5 +1,8 @@
 import { useState } from 'react';
-import SpinBoxView from './view/SpinBoxView';
+/** https://www.npmjs.com/package/react-vac  */
+import { VAC } from 'react-vac';
+
+// import SpinBoxView from './view/SpinBoxView';
 
 const SpinBox = () => {
   const [value, setValue] = useState(0);
@@ -12,7 +15,11 @@ const SpinBox = () => {
   };
 
   // JSX를 VAC로 교체
-  return <SpinBoxView {...props} />;
+  // return <SpinBoxView {...props} />;
+
+  // VAC 개발 전이라면
+  // 다음과 같이 VAC Debugger를 활용하여 props object 테스트 가능
+  return <VAC name="DummyView" data={props} />;
 };
 
 export default SpinBox;
