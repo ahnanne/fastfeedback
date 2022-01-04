@@ -4083,6 +4083,11 @@ react-use-measure@^2.1.1:
   dependencies:
     debounce "^1.2.1"
 
+react-vac@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-vac/-/react-vac-0.2.2.tgz#021dae14390bdce8c5796c083292b442e1ef1c76"
+  integrity sha512-FkomW7bRZ/5zi+5r0YvtnjXa9RThICCh986rzZWeiIQq06HClj/UcAwolIvNUr64yY1hsO2QNBBFAM1ld9Y5Ag==
+
 react@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
