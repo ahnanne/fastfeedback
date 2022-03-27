@@ -3,7 +3,7 @@ const formatUser = (user) => {
     uid: user.uid,
     email: user.email,
     name: user.displayName,
-    provider: user.providerData[0].providerId,
+    provider: user.providerData ? user.providerData[0].providerId : '',
     photoUrl: user.photoURL
   };
 };
