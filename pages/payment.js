@@ -36,7 +36,7 @@ export default function Payment() {
         autoComplete="cc-number"
         maxLength={4}
       />
-      <input
+      {/* <input
         type="text"
         id="cardnumber4"
         name="cardnumber"
@@ -45,7 +45,7 @@ export default function Payment() {
         }}
         autoComplete="cc-number"
         maxLength={4}
-      />
+      /> */}
     </>
   );
 }
