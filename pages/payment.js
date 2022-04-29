@@ -36,16 +36,16 @@ export default function Payment() {
         autoComplete="cc-number"
         maxLength={4}
       />
-      {/* <input
+      <input
         type="text"
-        id="cardnumber4"
-        name="cardnumber"
+        // id="cardnumber4"
+        // name="cardnumber"
         onChange={(e) => {
           console.log('cardnumber4', e.target.value);
         }}
-        autoComplete="cc-number"
+        // autoComplete="cc-number"
         maxLength={4}
-      /> */}
+      />
     </>
   );
 }
