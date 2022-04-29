@@ -5,8 +5,8 @@ export default function Payment() {
 
   return (
     <>
-      <label htmlFor="card-number">카드 번호</label>
-      <input type="text" id="card-number" name="card-number" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+      <label htmlFor="cardnumber">카드 번호</label>
+      <input type="text" id="cardnumber" name="cardnumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
     </>
   );
 }
