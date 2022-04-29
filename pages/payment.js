@@ -46,6 +46,13 @@ export default function Payment() {
         // autoComplete="cc-number"
         maxLength={4}
       />
+      <input
+        type="text"
+        onChange={(e) => {
+          console.log('cardnumber4', e.target.value);
+        }}
+        maxLength={4}
+      />
     </>
   );
 }
