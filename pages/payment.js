@@ -15,7 +15,18 @@ export default function Payment() {
           console.log('cardnumber', e.target.value);
         }}
         autoComplete="cc-number"
-        maxLength={4}
+      />
+
+<label htmlFor="expdate">유효 기간</label>
+      <input
+        style={{ border: '1px solid grey' }}
+        type="text"
+        id="expdate"
+        name="expdate"
+        onChange={(e) => {
+          console.log('expdate', e.target.value);
+        }}
+        autoComplete="cc-exp"
       />
     </>
   );
